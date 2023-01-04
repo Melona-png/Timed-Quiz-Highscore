@@ -5,7 +5,18 @@ const scoreText = document.querySelector("#score");
 
 // Need a timer somewhere here
 
-// const timer = document.querySelector('#timer');
+const timeH = document.querySelector("h3");
+let timeSecond = 90;
+
+timeH.innerHTML = ` ${timeSecond}`;
+
+const countDown = setInterval(() => {
+  timeSecond--;
+  timeH.innerHTML = ` ${timeSecond}`;
+  if (timeSecond <= 0 || timeSecond < 1) {
+    clearInterval(countDown);
+  }
+}, 1000);
 
 let currentQuestion = {};
 let acceptingAnswers = true;
