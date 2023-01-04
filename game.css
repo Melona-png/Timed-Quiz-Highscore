@@ -1,0 +1,45 @@
+body {
+  background-color: white;
+}
+
+h1 {
+}
+/* timer is h3 */
+h3 {
+  right: 1200px;
+  border: 3px solid green;
+}
+
+/* boxes that the options are in */
+.choice-container {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  background: pink;
+  min-width: 100px;
+  border-radius: 4px;
+}
+
+/* multiple coice options interactivity */
+.choice-container:hover {
+  cursor: pointer;
+  background-color: rgb(255, 88, 116);
+}
+
+.choice-prefix {
+  padding: 10px;
+}
+
+.choice-text {
+  padding: 10px;
+  width: 100%;
+}
+
+/* effect when correct choice is made by user */
+.correct {
+  background: rgb(153, 153, 255);
+}
+
+.incorrect {
+  background: rgb(95, 95, 95);
+}

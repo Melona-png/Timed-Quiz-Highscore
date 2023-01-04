@@ -1,1 +1,0 @@
-# Timed-Quiz-Highscore-Challenge

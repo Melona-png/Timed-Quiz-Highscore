@@ -1,0 +1,121 @@
+:root {
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* headers could go here */
+
+h1 {
+  color: rgb(0, 0, 0);
+}
+
+#highscore-btn {
+  margin: 0 auto;
+  padding: 0 auto;
+  background-color: rgb(171, 218, 140);
+}
+
+.container {
+  width: 100vw;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 0 auto;
+  max-height: 0 auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 198, 207);
+}
+
+.btn:hover {
+  cursor: pointer;
+  /* add some other type of box hover effect */
+}
+
+/* this makes it so you cant click a button */
+.btn[disabled]:hover {
+  cursor: not-allowed;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid rgb(250, 191, 235);
+}
+
+#submit-btn {
+  /* create a button for the user to submit their score/initials */
+}
+
+/* END PAGE CSS HIGH SCORE PAGE */
+
+.end-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 100px;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  box-shadow: rgb(0, 0, 0);
+}
+
+input::placeholder {
+  color: blue;
+}
+
+#username {
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+}
+
+#end-text {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+#saveScoreBtn {
+  border: none;
+}
