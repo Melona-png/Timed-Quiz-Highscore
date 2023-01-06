@@ -12,6 +12,7 @@ const countDown = setInterval(() => {
   timeH.innerHTML = ` ${timeSecond}`;
   if (timeSecond <= 0 || timeSecond < 1) {
     clearInterval(countDown);
+    return window.location.assign("./endpage.html");
   }
 }, 1000);
 
@@ -64,8 +65,6 @@ let questions = [
   },
 ];
 
-// scoreText.textContent = score;
-
 startGame = () => {
   questionCounter = 0;
   availableQuestions = [...questions];
@@ -76,7 +75,7 @@ getNewQuestion = () => {
   if (availableQuestions.length === 0) {
     localStorage.setItem("mostRecentScore", timeSecond);
 
-    return window.location.assign("/endpage.html");
+    return window.location.assign("../endpage/endpage.html");
   }
 
   const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -120,7 +119,6 @@ choices.forEach((choice) => {
         selectedChoice.parentElement.classList.remove(classToApply);
         getNewQuestion();
       }, 500);
-      // if the wrong answer, then decrement the timer, check if the timer is less than 0, then go to endgame.html
     }
   });
 });

@@ -26,5 +26,5 @@ saveScoreBtn.addEventListener("click", function () {
   highScores.push(score);
   localStorage.setItem("highScores", JSON.stringify(highScores));
 
-  window.location("./highscores.html");
+  window.location("./highscores/highscores.html");
 });
