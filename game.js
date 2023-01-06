@@ -1,9 +1,6 @@
 const question = document.querySelector("#question");
 const choices = Array.from(document.querySelectorAll(".choice-text"));
-// const progressText = document.querySelector("#progressText");
 const scoreText = document.querySelector("#score");
-
-// Need a timer somewhere here
 
 const timeH = document.querySelector("h3");
 let timeSecond = 90;
@@ -67,20 +64,17 @@ let questions = [
   },
 ];
 
-const SCORE_POINTS = 100;
-
-scoreText.textContent = score;
+// scoreText.textContent = score;
 
 startGame = () => {
   questionCounter = 0;
-  score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
 };
 
 getNewQuestion = () => {
   if (availableQuestions.length === 0) {
-    localStorage.setItem("mostRecentScore", score);
+    localStorage.setItem("mostRecentScore", timeSecond);
 
     return window.location.assign("/endpage.html");
   }
@@ -111,15 +105,21 @@ choices.forEach((choice) => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     if (classToApply === "correct") {
-      incrementScore(SCORE_POINTS);
-
+      timeSecond += 10;
       selectedChoice.parentElement.classList.add(classToApply);
 
       setTimeout(() => {
         selectedChoice.parentElement.classList.remove(classToApply);
         getNewQuestion();
-      }, 1000);
+      }, 500);
     } else {
+      timeSecond -= 10;
+      selectedChoice.parentElement.classList.add(classToApply);
+
+      setTimeout(() => {
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQuestion();
+      }, 500);
       // if the wrong answer, then decrement the timer, check if the timer is less than 0, then go to endgame.html
     }
   });
