@@ -6,3 +6,9 @@ highScoresList.innerHTML = highScores
     return `<li class="high-score">${score.name} - ${score.score}</li>`;
   })
   .join("");
+
+document.querySelector("button").addEventListener("click", function () {
+  localStorage.clear();
+
+  highScoresList.innerHTML = "";
+});
