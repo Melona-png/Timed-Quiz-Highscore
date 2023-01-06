@@ -92,12 +92,12 @@ input {
   width: 100px;
   padding: 12px;
   font-size: 16px;
-  border: none;
   box-shadow: rgb(0, 0, 0);
+  border-style: 2px solid rgb(0, 0, 0);
 }
 
 input::placeholder {
-  color: blue;
+  color: rgb(0, 138, 7);
 }
 
 #username {
