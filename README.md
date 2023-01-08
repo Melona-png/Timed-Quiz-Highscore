@@ -3,7 +3,7 @@
 This application loads a timed quiz that decrements time when the incorrect answer is selected, and incrememnts time when the correct answer is selected.
 The questions can be changed as needed. 
 
-#Description
+##Description
 I created this quiz with Javascript through local storage and data selectors. I used local storage to allow users to save their scores on a leaderboard. 
 
 <img src="./assets/screenshot.png" alt="screenshot of game page">
